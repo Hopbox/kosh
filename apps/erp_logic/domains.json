@@ -1,1 +1,1 @@
-{"domains":["logicerp.com","logicerp.co.in","logicerp.net.in"], "depends_on":["amazon_s3"]}
+{"domains":["logicerp.com","logicerp.co.in","logicerp.net.in"], "depends_on":["amazon_s3_apsouth1"], "tag":["allow_with_caution"]}
