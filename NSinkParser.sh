@@ -13,7 +13,7 @@ fi
 
 cat "$1" | while read line; do
   # Extract the folder name using regular expressions
-  folder_name=$(echo "$line" | grep -oP '[^\.]+$')
+  dir_name=$(echo "$line" | grep -oP '[^\.]+$')
   #Check if line starts with host or ip
   if [[ $line == host* ]]; then
         # Extract the domain name using regular expressions
@@ -27,28 +27,28 @@ cat "$1" | while read line; do
   fi
 
   # Check if folder already exists, create it if not
-  if [ ! -d "./apps/$folder_name" ]; then
-        mkdir -p "./apps/$folder_name"
+  if [ ! -d "./apps/${dir_name}" ]; then
+        mkdir -p "./apps/${dir_name}"
   fi
 
   # Check if file already exists, create it if not and append the domain or IP and subnet
-  #if [ ! -f "./apps/$folder_name/domains" ]; then
-   # echo "$domain" > "./apps/$folder_name/domains"
+  #if [ ! -f "./apps/${dir_name}/domains" ]; then
+   # echo "$domain" > "./apps/${dir_name}/domains"
   #else
     if [ -n "$domain" ]; then
-        echo "$domain" >> "./apps/$folder_name/domains"
+        echo "$domain" >> "./apps/${dir_name}/domains"
         # Remove Duplicates from the files if added any
-        awk -i inplace '!seen[$0]++' ./apps/$folder_name/domains
+        awk -i inplace '!seen[$0]++' ./apps/${dir_name}/domains
     fi
   #fi
 
-  #if [ ! -f "./apps/$folder_name/ip" ]; then
-   # echo "$ip" > "./apps/$folder_name/ip"
+  #if [ ! -f "./apps/${dir_name}/ip" ]; then
+   # echo "$ip" > "./apps/${dir_name}/ip"
   #else
     if [ -n "$ip" ]; then
-        echo "$ip" >> "./apps/$folder_name/ip"
+        echo "$ip" >> "./apps/${dir_name}/ip"
         # Remove Duplicates from the files if added any
-        awk -i inplace '!seen[$0]++' ./apps/$folder_name/ip
+        awk -i inplace '!seen[$0]++' ./apps/${dir_name}/ip
     fi
   #fi
 done
