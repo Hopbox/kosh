@@ -3,7 +3,8 @@
 Kosh is a collection of widely used configuration information about various applications
 
 
-To use the NSinkParser (Example:- https://gitlab.com/netify.ai/public/netify-agent/-/blob/master/deploy/netify-sink.conf)
+To use the NSinkParser 
+(Example file:- https://gitlab.com/netify.ai/public/netify-agent/-/blob/master/deploy/netify-sink.conf)
 ```
 ./NSinkParser.sh netify-sink.conf
 ```
