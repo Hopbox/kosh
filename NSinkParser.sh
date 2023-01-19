@@ -13,7 +13,7 @@ fi
 
 cat "$1" | while read line; do
   # Extract the folder name using regular expressions
-  dir_name=$(echo "$line" | grep -oP '[^\.]+$')
+  dir_name=$(echo "$line" | sed ' s/\s*#.*//g ;/^$/ d ' |grep -oP '[^\.]+$')
   #Check if line starts with host or ip
   if [[ $line == host* ]]; then
         # Extract the domain name using regular expressions
