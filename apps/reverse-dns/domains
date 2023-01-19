@@ -1,2 +1,4 @@
 in-addr.arpa
 ip6.arpa
+ipv4only.arpa
+ip6.int
