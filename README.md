@@ -13,11 +13,11 @@ To use the BLPListParser (It is to parse this project https://github.com/blockli
 ```
 git clone https://github.com/blocklistproject/Lists.git
 ```
-2. If you want to use it to parse `apps` then then remove any others files and run
+2. If you want to use it to parse `apps`, Then remove any others files and run
 ```
  ./BLPListParser.sh -a
 ``` 
-2. If you want to use it to parse `catagoties` then then remove any others files and Run
+2. If you want to use it to parse `categories`, Then remove any others files and Run
 ```
  ./BLPListParser.sh -c
 ```
