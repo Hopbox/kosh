@@ -20,6 +20,7 @@ ls *.txt | while read line; do
     fi       
         sed ' s/0\.0\.0\.0 // ;s/\s*#.*//g ;/^$/ d ' $line >> "../kosh/${type}/${dir_name}/domains"
         # Remove Duplicates from the files if added any
+        pwd
         awk -i inplace '!seen[$0]++' ../kosh/${type}/${dir_name}/domains    
         line = ""
 
@@ -33,6 +34,7 @@ ls *.ip | while read line; do
     fi       
         sed 's/\s*#.*//g; /^$/ d' $line >> "../kosh/${type}/${dir_name}/ip"
         # Remove Duplicates from the files if added any
+        pwd
         awk -i inplace '!seen[$0]++' ../kosh/${type}/${dir_name}/domains
     done
 done
