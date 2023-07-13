@@ -1,5 +1,7 @@
 # kosh
 
+We have moved to `https://code.hopbox.in/hopbox/kosh`.
+
 Kosh is a collection of widely used configuration information about various applications
 
 
